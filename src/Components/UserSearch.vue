@@ -23,12 +23,13 @@ const searchByUsername = async (username: string) => {
 
   if (response.ok) {
     const data: {
-      items: { login: string; repos_url: string; avatar_url: string }[];
+      items: { login: string; repos_url: string; avatar_url: string; html_url: string }[];
     } = await response.json();
     users.value = data.items.map((item) => ({
       username: item.login,
       reposUrl: item.repos_url,
       avatarUrl: item.avatar_url,
+      htmlUrl: item.html_url,
     }));
     isLoading.value = false;
   }

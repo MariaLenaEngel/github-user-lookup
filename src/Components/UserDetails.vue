@@ -4,7 +4,7 @@ import { useLocalStorage, type repo } from "@/Composables/local-storage";
 
 import HeartEmptyIcon from "@/assets/icon-heart-empty.svg";
 import HeartFilledIcon from "@/assets/icon-heart-filled.svg";
-
+import ButtonIcon from "@/assets/icon-dots.svg";
 
 const props = defineProps(["selectedUser"]);
 const repos = ref<repo[]>([]);
@@ -48,6 +48,14 @@ onMounted(() => {
     <div class="acc-User_Content">
       <div class="acc-User_Name">
         <h2>{{ selectedUser.username }}</h2>
+      </div>
+      <div class="acc-User_Link">
+        <a :href="selectedUser.htmlUrl" class="btn-Button btn-Button-primary" target="_blank" alt="View profile">
+          <span>View profile</span>
+          <span class="btn-Button_Icon">
+            <img :src="ButtonIcon" alt="icon"/>
+          </span>
+        </a>
       </div>
     </div>
   </div>

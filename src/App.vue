@@ -2,6 +2,7 @@
 import HeartEmptyIcon from "@/assets/icon-heart-empty.svg";
 import UserIcon from "@/assets/icon-user.svg";
 
+import { repoLikeCount } from "@/Composables/local-storage";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import UserIcon from "@/assets/icon-user.svg";
     <div class="hd-Header_Item">
       <RouterLink class="hd-Header_Link" to="/favorites">
         <img class="hd-Header_Icon" :src="HeartEmptyIcon" alt="saved repos"/>
+        <span v-if="repoLikeCount" class="hd-Header_Count">{{ repoLikeCount }}</span>
       </RouterLink>
     </div>
   </div>

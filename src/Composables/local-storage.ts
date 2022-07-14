@@ -9,6 +9,7 @@ export type repo = {
 };
 
 const STORAGE_KEY = "ghFinderLikes";
+export const repoLikeCount = ref(0);
 
 export const useGetLocalStorage = () =>
   JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "{}");
@@ -18,6 +19,7 @@ export const useSetLocalStorage = <T>(data: T) =>
 
 export const useLocalStorage = () => {
   const repoLikeMap = ref<{ [key: string]: repo }>(useGetLocalStorage());
+  repoLikeCount.value = Object.keys(repoLikeMap.value).length;
 
   const useSaveLike = (repo: repo) => {
     const existingRepos = useGetLocalStorage();
@@ -31,6 +33,7 @@ export const useLocalStorage = () => {
     };
 
     useSetLocalStorage(dataToBeUpdate);
+    repoLikeCount.value += 1;
     repoLikeMap.value = dataToBeUpdate;
   };
 
@@ -38,8 +41,9 @@ export const useLocalStorage = () => {
     const existingRepos = useGetLocalStorage();
     delete existingRepos[repoOwnerLoginAndName];
     useSetLocalStorage(existingRepos);
+    repoLikeCount.value -= 1;
     repoLikeMap.value = existingRepos;
   };
 
-  return { useSaveLike, useRemoveLike, repoLikeMap };
+  return { useSaveLike, useRemoveLike, repoLikeMap, repoLikeCount };
 };

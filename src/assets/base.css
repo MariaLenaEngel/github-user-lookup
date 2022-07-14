@@ -14,3 +14,89 @@ h2 {
   text-transform: uppercase;
 }
 
+a, a:visited, a:active{
+  color: var(--Color_Black);
+}
+
+.btn-Button {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  display: flex;
+  font-family: var(--Font_Family-gtAmericaMono);
+  font-size: 13px;
+  font-weight: 400;
+  justify-content: center;
+  letter-spacing: 0.2em;
+  line-height: 16px;
+  overflow: hidden;
+  padding: 12px 15px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase; 
+  white-space: nowrap;
+  z-index: 1; 
+}
+
+.btn-Button-primary {
+  --notchSize: 5px;
+  background-color: var(--Color_OffWhite);
+  color: var(--Color_WarmBlack);
+  clip-path:
+    polygon(
+      0% var(--notchSize),
+      var(--notchSize) 0%,
+      calc(100% - var(--notchSize)) 0%,
+      100% var(--notchSize),
+      100% calc(100% - var(--notchSize)),
+      calc(100% - var(--notchSize)) 100%,
+      var(--notchSize) 100%,
+      0% calc(100% - var(--notchSize))
+    );
+  text-align: left;
+  transition: color 0.5s ease;
+  width: fit-content;  
+}
+
+.btn-Button-primary:not([disabled]):hover {
+  animation: PrimaryButtonFlicker 0.2s normal forwards linear;
+  color: var(--Color_Grey-2);  
+}
+
+@keyframes PrimaryButtonFlicker {
+  0% {
+    background-color: var(--Color_OffWhite);
+  }
+
+  10% {
+    background-color: var(--Color_OffWhite);
+  }
+
+  20% {
+    background-color: var(--Color_OffWhite);
+  }
+
+  50% {
+    background-color: var(--Color_WarmBlack);
+  }
+
+  60% {
+    background-color: var(--Color_OffWhite);
+  }
+
+  100% {
+    background-color: var(--Color_WarmBlack);
+  }
+}
+
+.btn-Button_Icon {
+  border-left: 1px dotted var(--Color_MilitaryGreen);
+  color:var(--Color_MilitaryGreen);
+  display: block;
+  height: 15px;
+  margin-left: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 15px;  
+}
