@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+  <path
+    clip-rule="evenodd"
+    d="M11.5 4.556C11.5 6.52 9.934 8.11 8 8.11S4.5 6.52 4.5 4.556C4.5 2.59 6.066 1 8 1s3.5 1.591 3.5 3.556v0z"
+    stroke="#97999b"
+    stroke-linecap="round"
+  />
+  <path
+    clip-rule="evenodd"
+    d="M2.115 11.338a4 4 0 013.924-3.227h3.922a4 4 0 013.924 3.227L15 17H1l1.115-5.662z"
+    stroke="#97999b"
+  />
+</svg>

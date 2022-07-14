@@ -1,0 +1,69 @@
+/* stylelint-disable */
+:root {
+  /*
+  |--------------------------------------------------------------------------
+  | Colours
+  |--------------------------------------------------------------------------
+  |
+  */
+  --Color_Black: #030000;
+  --Color_Grey: #222123;
+  --Color_Grey-2: #97999b;
+  --Color_WarmBlack: #161616;
+  --Color_OffWhite: #f4f4f4;
+  --Color_MilitaryGreen: #7b7356;
+
+  /*
+  |--------------------------------------------------------------------------
+  | Families
+  |--------------------------------------------------------------------------
+  |
+  */
+  --Font_Family:
+    -apple-system,
+ BlinkMacSystemFont,
+ 'Segoe UI',
+ Roboto,
+    Helvetica,
+ Arial,
+ sans-serif,
+ 'Apple Color Emoji',
+ 'Segoe UI Emoji',
+    'Segoe UI Symbol',
+ sans-serif;
+
+  --Font_Family-mussels: 'TT Mussels';
+  --Font_Family-gtAmericaMono: 'GT America Mono';
+
+
+}
+
+@font-face {
+   font-family: 'TT Mussels';
+   font-style: normal;
+   font-weight: 300;
+   src:
+     url('TT-Mussels-Light.woff2') format('woff2'),
+     url('TT-Mussels-Light.woff') format('woff');
+   font-display: swap;
+ }
+ 
+ @font-face {
+   font-family: 'GT America Mono';
+   font-style: normal;
+   font-weight: 300;
+   src:
+     url('GT-America-Mono-Light.woff2') format('woff2'),
+     url('GT-America-Mono-Light.woff') format('woff');
+   font-display: swap;
+ }
+ 
+ @font-face {
+   font-family: 'GT America Mono';
+   font-style: normal;
+   font-weight: 400;
+   src:
+     url('GT-America-Mono-Regular.woff2') format('woff2'),
+     url('GT-America-Mono-Regular.woff') format('woff');
+   font-display: swap;
+ }

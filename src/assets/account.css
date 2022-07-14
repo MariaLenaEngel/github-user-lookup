@@ -1,0 +1,96 @@
+.acc-Account {
+  align-items: center;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  margin: 50px 15px;
+}
+
+.acc-Account_Heading {
+  font-family: var(--Font_Family-mussels);
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: .01em;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  .acc-Account_Heading {
+    font-size: 48px;
+  }
+}
+
+.acc-Account_Details {
+  max-width: 1220px;
+  width: 100%;
+}
+
+.acc-Account_Item {
+  padding: 40px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .acc-Account_Item {
+    padding: 40px;
+  }
+}
+
+.acc-User {
+  background-color: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+  .acc-User {
+    align-items: center;
+    display: flex;
+    margin: 0;
+  }
+}
+
+.acc-Repos {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+}
+
+.acc-Repos_Row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.acc-Account_Icon {
+  cursor: pointer;
+  line-height: 1.5;
+  width: 20px;
+}
+
+.acc-User_Picture {
+  border-radius: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .acc-User_Picture {
+    margin-right: 40px;
+  }
+}
+
+.acc-User_Content {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .acc-User_Content {
+    margin-top: 40px;
+  }
+}
+
+.hd-Header_Icon {
+  margin: 10px;
+  width: 20px;
+}
