@@ -1,3 +1,16 @@
 html, body, #app {
-  margin: 0;
+  background-color: var(--Color_Grey);
+  color: var(--Color_Grey-2);
+  font-family: var(--Font_Family-gtAmericaMono);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 15px;
+  margin: 0;  
 }
+
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+

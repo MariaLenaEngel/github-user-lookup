@@ -1,0 +1,13 @@
+.hd-Header_Nav {
+  align-items: center;
+  background: var(--Color_Black);
+  color: #97999b;
+  display: flex;
+  justify-content: flex-end; 
+  padding: 5px 20px;
+}
+
+.hd-Header_Icon {
+  margin: 10px;
+  width: 20px; 
+}
